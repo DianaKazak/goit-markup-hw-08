@@ -3,7 +3,7 @@
 
 }
 
-.page-header__container, .page-header__nav, .site-nav {
+.page-header__container, .page-header__nav {
     display: flex;
     align-items: center;
 }
@@ -17,16 +17,18 @@ nav.page-header__nav {
 }
 
 .page-header__nav {
-    @include max-mobile {
+    @include mobile {
             padding-top: 16px;
             padding-bottom: 16px;
         }
 }
 
+
+
 .site-nav__item {
     position: relative;
 
-    @include max-mobile {
+    @include mobile {
             &:not(:last-child) {
                 margin-bottom: 32px;
             }
@@ -96,7 +98,7 @@ nav.page-header__nav {
     display: flex;
     margin-left: auto;
 
-    @include max-mobile {
+    @include mobile {
             flex-direction: column-reverse;
             margin-bottom: 64px;
         }
@@ -132,7 +134,7 @@ nav.page-header__nav {
 }
 
 .our-contact__link {
-    @include max-mobile {
+    @include mobile {
             font-weight: 500;
             font-size: 34px;
             line-height: 1.17px;
@@ -154,7 +156,7 @@ nav.page-header__nav {
     fill: currentColor;
     margin-right: 10px;
 
-    @include max-mobile {
+    @include mobile {
             display: none;
         }
     
@@ -189,7 +191,7 @@ nav.page-header__nav {
         display: block;
     }
 
-    @include max-mobile {
+    @include mobile {
         display: none;
         position: fixed;
         top: 0;
@@ -214,6 +216,7 @@ nav.page-header__nav {
     padding: 0;
     border: none;
     background-color: transparent;
+    padding-left: 270px;
 
     @include tablet {
         display: none;
@@ -243,7 +246,16 @@ nav.page-header__nav {
 }
 
 .site-nav {
+
+    @include mobile {
+            display: block;
+        }
+
     @include tablet {
+        display: flex;
+    }
+
+    @include desktop {
         display: flex;
     }
 }

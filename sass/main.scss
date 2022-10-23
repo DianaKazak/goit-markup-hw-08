@@ -1,62 +1,23 @@
-body {
-    font-family: 'Roboto', sans-serif;
-    color: #212121;
-    margin: 0;
-    padding: 0;
-}
+@import "./utils/variables";
+@import "./utils/placeholders";
+@import "./utils/mixins";
 
-.container {
-    width: 1200px;
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-left: auto;
-    margin-right: auto;
+@import "./base/base";
 
-    @media screen and (min-width: 480px) {
-            width: 480px;
-        }
-    
-    @media screen and (min-width: 768px) {
-            width: 768px;
-        }
-    
-    @media screen and (min-width: 1200px) {
-            width: 1200px;
-        }
-}
+@import "./layout/header";
+@import "./layout/footer";
 
-li {
-    list-style-type: none;
-    display: inline;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-ul {
-    margin: 0;
-    padding: 0;
-}
-
-.link {
-    text-decoration: none;
-}
-
-img {
-    display: block;
-}
-
-@import "./mixins";
-@import "./components/footer";
-@import "./components/header";
+@import "./components/logo";
 @import "./components/section1";
-@import "./components/section2";
 @import "./components/section0";
+@import "./components/section2";
 @import "./components/section3";
-@import "./components/section_clients";
-@import "./components/portfolio";
+@import "./components/section4";
+
+@import "./components/filter";
+@import "./components/gallery";
+@import "./components/modal";
+
+
+
 

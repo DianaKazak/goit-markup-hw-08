@@ -1,24 +1,70 @@
 .section0 {
-    display: none;
+    padding: 60px 0px;
+}
+
+.section0__list {
+    @extend %list;
+
+    @include tablet {
+    margin: -15px;
+    display: flex;
+    flex-wrap: wrap;
+    }
+
     @include desktop {
-            display: flex;
-        }
-    padding-bottom: 94px;
+    flex-wrap: nowrap;
+    }
 }
 
-.feature1 {
-    padding-bottom: 50px;
+.section0__item:not(:last-child) {
+    @include max-mobile {
+    margin-bottom: 30px;
+    }
+
+
 }
 
-.feature1,
-.team {
-    font-family: 'Roboto';
-    font-size: 36px;
-    line-height: 1.16;
-    text-align: center;
+.section0__item {
+    @include tablet {
+        flex-basis: calc((100% - 4 * 15px)/2);
+        margin: 15px;
+    }
+
+    @include desktop {
+        flex-basis: calc((100% - 8 * 15px)/4);
+        margin: 15px;
+    }
+
+}
+
+.section0__subtitle {
+    margin: 0;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
     letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: $titleColor;
+
+    @include max-mobile {
+        text-align: center;
+    }
 }
 
-.photo1 {
-    padding-right: 30px;
+.section0__icon {
+    margin-bottom: 30px;
+    padding: 25px 100px;
+    height: 120px;
+    width: 100%;
+    background-color: #F5F4FA;
+    border-radius: 4px;
+}
+
+.section0__text {
+    margin-top: 10px;
+    margin-bottom: 0;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    color: $textColor;
 }
